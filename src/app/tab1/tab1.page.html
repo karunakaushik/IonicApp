@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar [style.--background]="'navy'" [style.--color]="'white'">
+    <ion-title>
+     <b> Home Page</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3 class="text"><b> Photos Collection here </b></h3>
+
+  <ion-slides [options]="sliderOpts">
+    <ion-slide *ngFor= "let img of [1,2,3] " >
+        <img src="assets/img/{{img}}.jpg" tappable (click)= "openPreview(img)" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>
